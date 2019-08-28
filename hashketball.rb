@@ -216,9 +216,6 @@ def winning_team
   return team_scores.key(team_scores.values.max)
 end
 
-
-
-
 def player_with_longest_name
   letter_count = 0
   player_with_longest_name = ""
