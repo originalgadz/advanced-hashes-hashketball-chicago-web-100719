@@ -204,7 +204,7 @@ def most_points_scored
   return player
 end
 
-def winnning_team
+def winning_team
   team_scores = {}
   game_hash.each do |team_key, team_hash|
     combined_points = 0
