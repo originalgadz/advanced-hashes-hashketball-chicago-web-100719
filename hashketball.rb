@@ -205,16 +205,15 @@ def most_points_scored
 end
 
 def winnning_team
+  team_scores = {}
   game_hash.each do |team_key, team_hash|
     combined_points = 0
-      team_hash[:players].length.times do |index|
-        team_hash[:players][index][:points] > most_points
-          most_points = team_hash[:players][index][:points]
-          player = team_hash[:players][index][:player_name]
-        end
-      end
+    team_hash[:players].length.times do |index|
+      combined_points += team_hash[:players][index][:points]
+    end
+    team_scores[team_hash[:team_name]] = combined_points
   end
-  return player
+  return 
 end
 
 
