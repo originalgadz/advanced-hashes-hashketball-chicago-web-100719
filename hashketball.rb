@@ -213,7 +213,7 @@ def winnning_team
     end
     team_scores[team_hash[:team_name]] = combined_points
   end
-  return 
+  return team_scores.key(team_scores.values.max)
 end
 
 
